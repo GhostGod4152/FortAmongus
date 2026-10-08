@@ -1,0 +1,26 @@
+
+{
+  "_status": "DRAFT. Unverified against Among Us code or Melty game_info. Every cell marked TODO must be checked before building.",
+  "_host": {"game": "among-us", "loader": "bepinex-6-il2cpp", "role": "primary"},
+  "_companions": [{"game": "fortnite", "role": "companion", "use": "rules only; read any readable files from {game:fortnite}; show in-game note if missing"}],
+  "systems": [
+    {"id": "bus_drop", "phase": "start", "inputs": "map spawn points", "player_choice": "jump spot along bus path", "hook": "TODO: game start / spawn hook", "verified": false},
+    {"id": "storm", "phase": "round", "shrink_stages": 5, "stage_seconds": 60, "damage_per_second": 1, "hook": "TODO: per-frame player update", "verified": false},
+    {"id": "loot_spawn", "phase": "round", "spawn_points_per_map": "TODO", "table": "loot", "hook": "TODO: map object spawn", "verified": false},
+    {"id": "impostor_kill", "phase": "round", "uses": "weapons", "hook": "TODO: kill/cooldown hook", "verified": false},
+    {"id": "meetings", "phase": "round", "note": "keep vanilla Among Us meetings", "verified": false}
+  ],
+  "loot": [
+    {"id": "pistol", "type": "weapon", "damage": 25, "range": "TODO", "who_can_use": "impostor", "rarity": "common"},
+    {"id": "shotgun", "type": "weapon", "damage": 60, "range": "TODO", "who_can_use": "impostor", "rarity": "rare"},
+    {"id": "bandage", "type": "heal", "heal": 15, "who_can_use": "all", "rarity": "common"},
+    {"id": "shield", "type": "heal", "shield": 50, "who_can_use": "all", "rarity": "rare"}
+  ],
+  "multiplayer": {
+    "maxPlayers": 10,
+    "maxPlayers_verified": false,
+    "impostors": 2,
+    "connect": "TODO: read game_info for sessions; leave out until two-copy test passes"
+  },
+  "preflight": {"unfilled_cells": ["hooks (all systems)", "loot.range", "spawn_points_per_map", "multiplayer.connect"], "ready_to_build": false}
+}
